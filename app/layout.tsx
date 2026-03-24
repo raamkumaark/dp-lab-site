@@ -7,6 +7,7 @@
       "@id": "https://devicephysicslab.vercel.app/#organization",
       name: "Device Physics Lab",
       url: "https://devicephysicslab.vercel.app",
+      inLanguage: "en",
       description:
         "Device Physics Lab focuses on organic electronics, charge transport in molecules, photodetectors, and advanced electronic materials.",
       areaOfResearch: [
