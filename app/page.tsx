@@ -600,7 +600,7 @@ export default function Home() {
   </div>
 </section>
 
-      {/* CONTACT */}
+     {/* CONTACT */}
 <section id="contact" className="scroll-mt-24 bg-[#0d1f3c] text-white px-8 py-20">
   <div className="max-w-7xl mx-auto">
 
@@ -609,9 +609,9 @@ export default function Home() {
     </h2>
 
     {/* CONTACT + MAP */}
-    <div className="grid md:grid-cols-2 gap-12 mb-16">
+    <div className="grid md:grid-cols-2 gap-8 items-start mb-16">
 
-      {/* LEFT: DETAILS */}
+      {/* LEFT: CONTACT */}
       <div>
         <h3 className="text-xl font-serif mb-4 text-[#c9a84c]">
           Get in Touch
@@ -623,7 +623,7 @@ export default function Home() {
           Andhra Pradesh, India
         </p>
 
-        <p className="text-sm text-gray-300 mb-2">
+        <p className="text-sm text-gray-300 mb-4">
           Email: sabyasachi.m@srmap.edu.in
         </p>
 
@@ -635,44 +635,64 @@ export default function Home() {
         </a>
       </div>
 
-      {/* RIGHT: GOOGLE MAP */}
-      <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#c9a84c]">
+      {/* RIGHT: MAP (smaller + aligned) */}
+      <div className="w-full h-[240px] rounded-lg overflow-hidden border border-[#c9a84c]">
         <iframe
           src="https://www.google.com/maps?q=SRM%20University%20AP&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
-          allowFullScreen
           loading="lazy"
         ></iframe>
       </div>
 
     </div>
 
-    {/* FUNDING / COLLABORATION LOGOS */}
-    <div>
-      <h3 className="text-xl font-serif mb-8 text-center text-[#c9a84c]">
-        Funding & Collaborations
+    {/* FUNDING */}
+    <div className="mb-14">
+      <h3 className="text-xl font-serif mb-6 text-center text-[#c9a84c]">
+        Funding Agencies
       </h3>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-8 items-center">
-
         {[
-          "/logos/serb.png",
-          "/logos/dst.png",
-          "/logos/csir.png",
-          "/logos/i-stem.png",
-          "/logos/srmap.png"
+          "/funding/anrf.png",
+          "/funding/gita.png",
+          "/funding/serb.png",
+          "/funding/srm.png",
         ].map((logo, i) => (
           <div key={i} className="flex justify-center">
             <img
               src={logo}
               alt="funding"
-              className="h-16 object-contain opacity-80 hover:opacity-100 hover:scale-110 transition duration-300"
+              className="h-14 object-contain opacity-80 hover:opacity-100 hover:scale-110 transition duration-300"
             />
           </div>
         ))}
+      </div>
+    </div>
 
+    {/* COLLABORATORS */}
+    <div>
+      <h3 className="text-xl font-serif mb-6 text-center text-[#c9a84c]">
+        Collaborators
+      </h3>
+
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-8 items-center">
+        {[
+          "/collablogo/weiz.png",
+          "/collablogo/iiser.png",
+          "/collablogo/vnit.png",
+          "/collablogo/srmist.png",
+        ].map((logo, i) => (
+          <div key={i} className="flex justify-center">
+            <img
+              src={logo}
+              alt="collaborator"
+              className="h-14 object-contain opacity-80 hover:opacity-100 hover:scale-110 transition duration-300"
+            />
+          </div>
+        ))}
       </div>
     </div>
 
