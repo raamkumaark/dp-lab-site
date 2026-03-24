@@ -475,13 +475,130 @@ export default function Home() {
 
       <PublicationsSection />
       {/* CAREERS */}
-      <section id="careers" className="bg-[#0d1f3c] text-center px-8 py-20">
-        <h2 className="text-3xl font-serif mb-4">Join the Lab</h2>
-        <p className="text-[#8fa8c8] mb-6">PhD & Internship opportunities available</p>
-        <a href="https://applications.srmap.edu.in/ph-d-applicationform-2026" target="_blank" className="bg-[#c9a84c] text-black px-6 py-3 rounded">
-          APPLY
-        </a>
-      </section>
+<section id="careers" className="scroll-mt-24 bg-[#f8f5ef] text-black px-8 py-20">
+  <div className="max-w-7xl mx-auto">
+
+    <h2 className="text-3xl font-serif mb-10 text-center text-[#0d1f3c]">
+      Join the Lab
+    </h2>
+
+    {/* TOP GRID */}
+    <div className="grid md:grid-cols-[120px_1fr_120px] gap-10 items-start">
+
+      {/* LEFT LOGO */}
+      <div className="hidden md:flex justify-center">
+        <img src="/dplogo.png" alt="Device Physics Lab" className="w-20 opacity-80" />
+      </div>
+
+      {/* MAIN CONTENT */}
+      <div>
+
+        <p className="text-[#444] leading-7 mb-6">
+          We are building a research group at the intersection of organic electronics, device physics, and functional materials. 
+          If your interests don’t fit neatly into one box, you’ll fit in here.
+        </p>
+
+        <p className="text-[#444] leading-7 mb-10">
+          Our work spans charge transport, optoelectronic devices, molecular design, and thin-film engineering, 
+          with a strong link between experiment and theory. We welcome researchers from physics, chemistry, materials science, 
+          electrical engineering, and related interdisciplinary backgrounds.
+        </p>
+
+        {/* TWO COLUMN CONTENT */}
+        <div className="grid md:grid-cols-2 gap-10 mb-12">
+
+          {/* WHAT YOU’LL DO */}
+          <div>
+            <h3 className="font-serif text-xl text-[#0d1f3c] mb-4">
+              What you’ll do here
+            </h3>
+            <ul className="space-y-2 text-sm text-[#555]">
+              <li>Design and study next-generation organic and hybrid electronic devices</li>
+              <li>Work on real experimental systems — fabrication, characterization, and analysis</li>
+              <li>Explore structure–property relationships using both lab and computational approaches</li>
+              <li>Contribute to publishable research and collaborative projects</li>
+              <li>Build skills for academia, semiconductor R&D, and deep-tech startups</li>
+            </ul>
+          </div>
+
+          {/* WHAT YOU’LL LEARN */}
+          <div>
+            <h3 className="font-serif text-xl text-[#0d1f3c] mb-4">
+              What you’ll learn
+            </h3>
+            <ul className="space-y-2 text-sm text-[#555]">
+              <li>Device fabrication and electrical characterization (I–V, photoresponse)</li>
+              <li>Charge transport mechanisms (SCLC, hopping, interface physics)</li>
+              <li>Thin-film processing techniques and materials engineering</li>
+              <li>Scientific writing, publishing, and research communication</li>
+              <li>How to think like a device physicist</li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* POSITIONS */}
+        <div>
+          <h3 className="font-serif text-xl text-[#0d1f3c] mb-6">
+            Available Positions
+          </h3>
+
+          <div className="space-y-8">
+
+            {/* PhD */}
+            <div className="bg-white border border-[#c9a84c] rounded-lg p-6 shadow-sm">
+              <h4 className="font-semibold mb-2">PhD Positions (2 openings)</h4>
+
+              <p className="text-sm text-[#555] mb-4">
+                University-funded fellowships are available for motivated candidates interested in organic electronics 
+                and device physics (both experimental and theoretical).
+              </p>
+
+              <a
+                href="https://applications.srmap.edu.in/ph-d-applicationform-2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#c9a84c] text-black px-5 py-2 rounded hover:opacity-90 transition"
+              >
+                Apply Now
+              </a>
+            </div>
+
+            {/* Internship */}
+            <div className="bg-white border border-[#c9a84c] rounded-lg p-6 shadow-sm">
+              <h4 className="font-semibold mb-2">Research Interns (UG/PG Students)</h4>
+
+              <p className="text-sm text-[#555] mb-4">
+                We offer internships for motivated students to gain hands-on experience in experimental device physics and materials research. 
+                Interns contribute to fabrication, measurements, data analysis, and research-driven problem solving.
+              </p>
+
+              <p className="text-sm text-[#555] mb-4">
+                Students from physics, chemistry, materials science, nanoscience, electronics, and related fields are encouraged to apply.
+              </p>
+
+              <a
+                href="mailto:sabyasachi.m@srmap.edu.in"
+                className="inline-block border border-[#c9a84c] px-5 py-2 rounded hover:bg-[#c9a84c] hover:text-black transition"
+              >
+                Email CV
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      {/* RIGHT LOGO */}
+      <div className="hidden md:flex justify-center">
+        <img src="/srmaplogo.png" alt="SRM University AP" className="w-20 opacity-80" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* CONTACT */}
       <section id="contact" className="bg-[#f8f5ef] text-black px-8 py-20">
