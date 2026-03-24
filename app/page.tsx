@@ -371,6 +371,8 @@ export default function Home() {
   </>
 )}
 
+</div>      {/* ✅ ADD THIS */}
+</section>  {/* ✅ ADD THIS */}
       {/* CAREERS */}
       <section id="careers" className="bg-[#0d1f3c] text-center px-8 py-20">
         <h2 className="text-3xl font-serif mb-4">Join the Lab</h2>
