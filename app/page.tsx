@@ -334,69 +334,83 @@ export default function Home() {
     </div>
 
     {/* ALUMNI */}
-    <div className="mt-16">
-      <h3 className="text-2xl font-serif mb-8 text-center text-[#c9a84c]">
-        Alumni
-      </h3>
+<div className="mt-16">
+  <h3 className="text-2xl font-serif mb-8 text-center text-[#c9a84c]">
+    Alumni
+  </h3>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 items-stretch">
-        {[
-         {
-  name: "Dr. Ramya Kunchanapalli",
-  role: "Assistant Professor (Adhoc), SRM University AP",
-  img: "/team/alumni/ramya.jpg",
-  pos: "object-center",   // good framing
-  profile: "...",
-  linkedin: "...",
-},
-{
-  name: "Dr. Ashwini Nawade",
-  role: "Assistant Professor, Parul University",
-  img: "/team/alumni/ashwini.jpg",
-  pos: "object-[center_20%]",   // adjust face position
-  profile: "...",
-  linkedin: "...",
-},
-        ].map(member => (
-          <div key={member.name} className="relative group bg-[#111f3d] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+  <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 items-stretch">
+    {[
+      {
+        name: "Dr. Ramya Kunchanapalli",
+        role: "Assistant Professor (Adhoc), SRM University AP",
+        img: "/team/alumni/ramya.jpg",
+        pos: "object-center",
+        profile: "https://www.srmap.edu.in/faculty/dr-kunchanapalli-ramya/",
+        linkedin: "https://www.linkedin.com/in/ramya-kunchanapalli-b66371137/",
+      },
+      {
+        name: "Dr. Ashwini Nawade",
+        role: "Assistant Professor, Parul University",
+        img: "/team/alumni/ashwini.jpg",
+        pos: "object-[center_20%]",
+        profile: "https://scholar.google.com/citations?user=1WPNcDMAAAAJ&hl=en",
+        linkedin: "https://www.linkedin.com/in/ashwini-nawade-527801108/",
+      },
+    ].map((member) => (
+      <div
+        key={member.name}
+        className="relative group bg-[#111f3d] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+      >
+        <img
+          src={member.img}
+          alt={member.name}
+          className={`w-full aspect-[3/4] object-cover ${
+            member.pos || "object-center"
+          } group-hover:scale-110 transition duration-500 ease-out`}
+          onError={(e) => {
+            e.currentTarget.src = "/team/placeholder.jpg";
+          }}
+        />
 
-            <img
-              src={member.img}
-              alt={member.name}
-              className={`w-full aspect-[3/4] object-cover ${member.pos || 'object-center'} group-hover:scale-110 transition duration-500 ease-out`}
-              onError={(e)=>{e.currentTarget.src='/team/placeholder.jpg'}}
-            />
+        {/* HOVER OVERLAY */}
+        <div
+          className="absolute inset-0 flex flex-col justify-end p-4 
+          bg-gradient-to-t from-[#0d1f3c] via-[#0d1f3c]/90 to-transparent 
+          opacity-0 group-hover:opacity-100 transition duration-300"
+        >
+          <h3 className="font-serif text-lg tracking-wide mb-1">
+            {member.name}
+          </h3>
 
-            {/* HOVER OVERLAY */}
-            <div className="absolute inset-0 flex flex-col justify-end p-4 
-              bg-gradient-to-t from-[#0d1f3c] via-[#0d1f3c]/90 to-transparent 
-              opacity-0 group-hover:opacity-100 transition duration-300">
+          <p className="text-xs uppercase tracking-wider text-[#c9a84c] mb-2">
+            {member.role}
+          </p>
 
-              <h3 className="font-serif text-lg tracking-wide mb-1">
-                {member.name}
-              </h3>
+          <div className="flex gap-2">
+            <a
+              href={member.profile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs border px-2 py-1 rounded hover:bg-[#c9a84c] hover:text-black transition"
+            >
+              Profile
+            </a>
 
-              <p className="text-xs uppercase tracking-wider text-[#c9a84c] mb-2">
-                {member.role}
-              </p>
-
-              <div className="flex gap-2">
-                <a href={member.profile} target="_blank" rel="noopener noreferrer"
-                  className="text-xs border px-2 py-1 rounded hover:bg-[#c9a84c] hover:text-black transition">
-                  Profile
-                </a>
-
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
-                  className="text-xs border px-2 py-1 rounded hover:bg-[#c9a84c] hover:text-black transition">
-                  LinkedIn
-                </a>
-              </div>
-
-            </div>
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs border px-2 py-1 rounded hover:bg-[#c9a84c] hover:text-black transition"
+            >
+              LinkedIn
+            </a>
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
 
   </div>
 </section>
