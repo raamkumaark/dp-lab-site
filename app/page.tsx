@@ -514,7 +514,7 @@ export default function Home() {
             </h3>
             <ul className="space-y-2 text-sm text-[#555]">
               <li>Design and study next-generation organic and hybrid electronic devices</li>
-              <li>Work on real experimental systems — fabrication, characterization, and analysis</li>
+              <li>Work on real experimental systems exploring fabrication, characterization, and analysis</li>
               <li>Explore structure–property relationships using both lab and computational approaches</li>
               <li>Contribute to publishable research and collaborative projects</li>
               <li>Build skills for academia, semiconductor R&D, and deep-tech startups</li>
