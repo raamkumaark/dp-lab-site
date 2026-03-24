@@ -601,43 +601,83 @@ export default function Home() {
 </section>
 
       {/* CONTACT */}
-      <section id="contact" className="bg-[#f8f5ef] text-black px-8 py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+<section id="contact" className="scroll-mt-24 bg-[#0d1f3c] text-white px-8 py-20">
+  <div className="max-w-7xl mx-auto">
 
-          {/* ADDRESS */}
-          <div>
-            <h2 className="text-3xl font-serif mb-4">Contact</h2>
-            <p className="text-sm text-[#444] leading-7">
-              JC312, Device Physics Lab<br/>
-              JC Bose Building<br/>
-              SRM University AP, Amaravati<br/>
-              Andhra Pradesh - 522 240, India
-            </p>
-            <p className="mt-4 text-sm">Email: sabyasachi.m@srmap.edu.in</p>
+    <h2 className="text-3xl font-serif mb-12 text-center">
+      Contact
+    </h2>
+
+    {/* CONTACT + MAP */}
+    <div className="grid md:grid-cols-2 gap-12 mb-16">
+
+      {/* LEFT: DETAILS */}
+      <div>
+        <h3 className="text-xl font-serif mb-4 text-[#c9a84c]">
+          Get in Touch
+        </h3>
+
+        <p className="text-sm text-gray-300 mb-4">
+          Device Physics Lab<br />
+          SRM University AP<br />
+          Andhra Pradesh, India
+        </p>
+
+        <p className="text-sm text-gray-300 mb-2">
+          Email: sabyasachi.m@srmap.edu.in
+        </p>
+
+        <a
+          href="mailto:sabyasachi.m@srmap.edu.in"
+          className="inline-block bg-[#c9a84c] text-black px-5 py-2 rounded hover:opacity-90 transition"
+        >
+          Email Us
+        </a>
+      </div>
+
+      {/* RIGHT: GOOGLE MAP */}
+      <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#c9a84c]">
+        <iframe
+          src="https://www.google.com/maps?q=SRM%20University%20AP&output=embed"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
+      </div>
+
+    </div>
+
+    {/* FUNDING / COLLABORATION LOGOS */}
+    <div>
+      <h3 className="text-xl font-serif mb-8 text-center text-[#c9a84c]">
+        Funding & Collaborations
+      </h3>
+
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-8 items-center">
+
+        {[
+          "/logos/serb.png",
+          "/logos/dst.png",
+          "/logos/csir.png",
+          "/logos/i-stem.png",
+          "/logos/srmap.png"
+        ].map((logo, i) => (
+          <div key={i} className="flex justify-center">
+            <img
+              src={logo}
+              alt="funding"
+              className="h-16 object-contain opacity-80 hover:opacity-100 hover:scale-110 transition duration-300"
+            />
           </div>
+        ))}
 
-          {/* FUNDING AGENCIES */}
-          <div>
-            <h2 className="text-3xl font-serif mb-6">Funding Agencies</h2>
+      </div>
+    </div>
 
-            <div className="grid grid-cols-2 gap-6 items-center">
-              <div className="flex items-center justify-center h-24 bg-white rounded p-4">
-                <img src="/funding/srm.png" alt="SRM" className="h-12 w-auto object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-24 bg-white rounded p-4">
-                <img src="/funding/anrf.png" alt="ANRF" className="h-12 w-auto object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-24 bg-white rounded p-4">
-                <img src="/funding/serb.png" alt="SERB" className="h-12 w-auto object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-24 bg-white rounded p-4">
-                <img src="/funding/gita.png" alt="GITA" className="h-12 w-auto object-contain" />
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
+  </div>
+</section>
 
     </main>
   );
