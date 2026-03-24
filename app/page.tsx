@@ -284,37 +284,120 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section id="team" className="bg-[#0d1f3c] px-8 py-20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-serif mb-10 text-center">Our Team</h2>
+{/* TEAM */}
+<section id="team" className="bg-[#0d1f3c] px-8 py-20">
+  <div className="max-w-7xl mx-auto">
 
-          <div className="grid md:grid-cols-3 gap-8 items-stretch">
-            {[
-              {name:"Dr. Ramya Kunchanapalli", role:"Assistant Professor (Adhoc)", email:"ramya.k@srmap.edu.in", img:"/team/ramya.jpg"},
-              {name:"Dr. Sarathbavan Murugan", role:"Postdoctoral Fellow", email:"sarathbavan.m@srmap.edu.in", img:"/team/sarath.jpg"},
-              {name:"Ramkumar Kaliyaperumal", role:"Research Scholar", email:"ramkumar_k@srmap.edu.in", img:"/team/ramkumar.jpg", pos:"object-[center_top]"},
-              {name:"Sneigitha Govindarajan", role:"Research Scholar", email:"sneigitha_g@srmap.edu.in", img:"/team/sneigitha.jpg"},
-              {name:"Akintayo A. Ismail", role:"Research Scholar", email:"ismailadegbola_a@srmap.edu.in", img:"/team/akintayo.jpg"},
-              {name:"Mukesh Iyyamperumal", role:"Research Scholar", email:"mukesh_i@srmap.edu.in", img:"/team/mukesh.jpg", pos:"object-[center_20%]"},
-              {name:"Raashi D", role:"Research Scholar", email:"raashi_d@srmap.edu.in", img:"/team/raashi.jpg", pos:"object-[center_top]"},
-              {name:"Suryakanta Sahoo", role:"JRF", email:"suryakanta.s@srmap.edu.in", img:"/team/suryakanta.jpg", pos:"object-[center_15%]"}
-            ].map(member => (
-              <div key={member.name} className="relative group bg-[#111f3d] rounded-lg overflow-hidden shadow-lg">
-                <img src={member.img} alt={member.name} className={`w-full h-64 object-cover ${member.pos || 'object-center'} group-hover:scale-105 transition duration-300`} onError={(e)=>{e.currentTarget.src='/team/placeholder.jpg'}} />
+    <h2 className="text-3xl font-serif mb-10 text-center">Our Team</h2>
 
-                {/* HOVER OVERLAY */}
-                <div className="absolute inset-0 bg-[#0d1f3c]/80 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center text-center p-4">
-                  <h3 className="font-serif text-lg mb-1">{member.name}</h3>
-                  <p className="text-sm text-[#c9a84c] mb-2">{member.role}</p>
-                  <p className="text-xs text-[#8fa8c8]">{member.email}</p>
-                </div>
-              </div>
-            ))}
+    {/* TEAM GRID */}
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 items-stretch">
+      {[
+        {name:"Dr. Ramya Kunchanapalli", role:"Assistant Professor (Adhoc)", email:"ramya.k@srmap.edu.in", img:"/team/ramya.jpg"},
+        {name:"Dr. Sarathbavan Murugan", role:"Postdoctoral Fellow", email:"sarathbavan.m@srmap.edu.in", img:"/team/sarath.jpg"},
+        {name:"Ramkumar Kaliyaperumal", role:"Research Scholar", email:"ramkumar_k@srmap.edu.in", img:"/team/ramkumar.jpg", pos:"object-[center_top]"},
+        {name:"Sneigitha Govindarajan", role:"Research Scholar", email:"sneigitha_g@srmap.edu.in", img:"/team/sneigitha.jpg"},
+        {name:"Akintayo A. Ismail", role:"Research Scholar", email:"ismailadegbola_a@srmap.edu.in", img:"/team/akintayo.jpg"},
+        {name:"Mukesh Iyyamperumal", role:"Research Scholar", email:"mukesh_i@srmap.edu.in", img:"/team/mukesh.jpg", pos:"object-[center_20%]"},
+        {name:"Raashi D", role:"Research Scholar", email:"raashi_d@srmap.edu.in", img:"/team/raashi.jpg", pos:"object-[center_top]"},
+        {name:"Suryakanta Sahoo", role:"JRF", email:"suryakanta.s@srmap.edu.in", img:"/team/suryakanta.jpg", pos:"object-[center_15%]"}
+      ].map(member => (
+        <div key={member.name} className="relative group bg-[#111f3d] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+
+          <img
+            src={member.img}
+            alt={member.name}
+            className={`w-full h-64 object-cover ${member.pos || 'object-center'} group-hover:scale-110 transition duration-500 ease-out`}
+            onError={(e)=>{e.currentTarget.src='/team/placeholder.jpg'}}
+          />
+
+          {/* HOVER OVERLAY */}
+          <div className="absolute inset-0 flex flex-col justify-end p-4 
+            bg-gradient-to-t from-[#0d1f3c] via-[#0d1f3c]/90 to-transparent 
+            opacity-0 group-hover:opacity-100 transition duration-300">
+
+            <h3 className="font-serif text-lg tracking-wide mb-1">
+              {member.name}
+            </h3>
+
+            <p className="text-xs uppercase tracking-wider text-[#c9a84c] mb-1">
+              {member.role}
+            </p>
+
+            <p className="text-xs text-[#8fa8c8]">
+              {member.email}
+            </p>
+
           </div>
-
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* ALUMNI */}
+    <div className="mt-16">
+      <h3 className="text-2xl font-serif mb-8 text-center text-[#c9a84c]">
+        Alumni
+      </h3>
+
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 items-stretch">
+        {[
+          {
+            name: "Dr. Ramya Kunchanapalli",
+            role: "Assistant Professor (Adhoc), SRM University AP",
+            img: "/team/alumni/ramya.jpg",
+            profile: "https://www.srmap.edu.in/faculty/dr-kunchanapalli-ramya/",
+            linkedin: "https://www.linkedin.com/in/ramya-kunchanapalli-b66371137/",
+          },
+          {
+            name: "Dr. Ashwini Nawade",
+            role: "Assistant Professor, Parul University",
+            img: "/team/alumni/ashwini.jpg",
+            profile: "https://scholar.google.com/citations?user=1WPNcDMAAAAJ&hl=en",
+            linkedin: "https://www.linkedin.com/in/ashwini-nawade-527801108/",
+          },
+        ].map(member => (
+          <div key={member.name} className="relative group bg-[#111f3d] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-full h-64 object-cover object-center group-hover:scale-110 transition duration-500 ease-out"
+              onError={(e)=>{e.currentTarget.src='/team/placeholder.jpg'}}
+            />
+
+            {/* HOVER OVERLAY */}
+            <div className="absolute inset-0 flex flex-col justify-end p-4 
+              bg-gradient-to-t from-[#0d1f3c] via-[#0d1f3c]/90 to-transparent 
+              opacity-0 group-hover:opacity-100 transition duration-300">
+
+              <h3 className="font-serif text-lg tracking-wide mb-1">
+                {member.name}
+              </h3>
+
+              <p className="text-xs uppercase tracking-wider text-[#c9a84c] mb-2">
+                {member.role}
+              </p>
+
+              <div className="flex gap-2">
+                <a href={member.profile} target="_blank" rel="noopener noreferrer"
+                  className="text-xs border px-2 py-1 rounded hover:bg-[#c9a84c] hover:text-black transition">
+                  Profile
+                </a>
+
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
+                  className="text-xs border px-2 py-1 rounded hover:bg-[#c9a84c] hover:text-black transition">
+                  LinkedIn
+                </a>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* FACILITIES */}
       <section id="facilities" className="bg-[#f8f5ef] text-black px-8 py-20">
