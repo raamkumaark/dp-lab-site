@@ -1,3 +1,23 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Device Physics Lab | Organic Electronics & Optoelectronics Research",
+  description:
+    "Device Physics Lab focuses on organic electronics, charge transport in molecules, photodetectors, and advanced electronic materials research.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -26,15 +46,18 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
-      <head>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        
+        {/* ✅ THIS IS THE ONLY IMPORTANT LINE */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
-      </head>
 
-      <body className="min-h-full flex flex-col">
         {children}
       </body>
     </html>
