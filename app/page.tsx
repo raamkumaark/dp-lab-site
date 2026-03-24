@@ -341,27 +341,29 @@ export default function Home() {
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 items-stretch">
         {[
-          {
-            name: "Dr. Ramya Kunchanapalli",
-            role: "Assistant Professor (Adhoc), SRM University AP",
-            img: "/team/alumni/ramya.jpg",
-            profile: "https://www.srmap.edu.in/faculty/dr-kunchanapalli-ramya/",
-            linkedin: "https://www.linkedin.com/in/ramya-kunchanapalli-b66371137/",
-          },
-          {
-            name: "Dr. Ashwini Nawade",
-            role: "Assistant Professor, Parul University",
-            img: "/team/alumni/ashwini.jpg",
-            profile: "https://scholar.google.com/citations?user=1WPNcDMAAAAJ&hl=en",
-            linkedin: "https://www.linkedin.com/in/ashwini-nawade-527801108/",
-          },
+         {
+  name: "Dr. Ramya Kunchanapalli",
+  role: "Assistant Professor (Adhoc), SRM University AP",
+  img: "/team/alumni/ramya.jpg",
+  pos: "object-center",   // good framing
+  profile: "...",
+  linkedin: "...",
+},
+{
+  name: "Dr. Ashwini Nawade",
+  role: "Assistant Professor, Parul University",
+  img: "/team/alumni/ashwini.jpg",
+  pos: "object-[center_20%]",   // adjust face position
+  profile: "...",
+  linkedin: "...",
+},
         ].map(member => (
           <div key={member.name} className="relative group bg-[#111f3d] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
 
             <img
               src={member.img}
               alt={member.name}
-              className="w-full h-64 object-cover object-center group-hover:scale-110 transition duration-500 ease-out"
+              className={`w-full aspect-[3/4] object-cover ${member.pos || 'object-center'} group-hover:scale-110 transition duration-500 ease-out`}
               onError={(e)=>{e.currentTarget.src='/team/placeholder.jpg'}}
             />
 
