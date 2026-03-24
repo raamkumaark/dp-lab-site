@@ -618,9 +618,11 @@ export default function Home() {
         </h3>
 
         <p className="text-sm text-gray-300 mb-4">
-          Device Physics Lab<br />
+          JC-312, Device Physics Lab<br />
+          JC Bose Building<br />
           SRM University AP<br />
-          Andhra Pradesh, India
+          Amaravati<br />
+          Andhra Pradesh - 522 240, India
         </p>
 
         <p className="text-sm text-gray-300 mb-4">
