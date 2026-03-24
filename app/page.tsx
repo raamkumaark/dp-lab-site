@@ -339,7 +339,7 @@ export default function Home() {
     Alumni
   </h3>
 
-  <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8 items-stretch">
+  <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 items-stretch">
     {[
       {
         name: "Dr. Ramya Kunchanapalli",
@@ -365,7 +365,7 @@ export default function Home() {
         <img
           src={member.img}
           alt={member.name}
-          className={`w-full aspect-[3/4] object-cover ${
+          className={`w-full h-64 object-cover ${member.pos || 'object-center'} ${
             member.pos || "object-center"
           } group-hover:scale-110 transition duration-500 ease-out`}
           onError={(e) => {
