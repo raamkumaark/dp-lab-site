@@ -1,8 +1,10 @@
 'use client'
+import { useState } from "react";
 
 // FINAL POLISHED VERSION (fixed JSX error + stable)
 
 export default function Home() {
+  const [pubTab, setPubTab] = useState("articles");
   return (
     <main className="min-h-screen bg-[#0d1f3c] text-white scroll-smooth">
 
