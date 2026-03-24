@@ -25,24 +25,49 @@ export default function RootLayout({
 }) {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "ResearchOrganization",
-    "@id": "https://devicephysicslab.vercel.app/#organization",
-    name: "Device Physics Lab",
-    url: "https://devicephysicslab.vercel.app",
-    description:
-      "Device Physics Lab focuses on organic electronics, charge transport in molecules, photodetectors, and advanced electronic materials.",
-    areaOfResearch: [
-      "Organic Electronics",
-      "Optoelectronics",
-      "Charge Transport",
-      "Photodetectors",
+    "@graph": [
+      {
+        "@type": "ResearchOrganization",
+        "@id": "https://devicephysicslab.vercel.app/#organization",
+        name: "Device Physics Lab",
+        url: "https://devicephysicslab.vercel.app",
+        description:
+          "Device Physics Lab focuses on organic electronics, charge transport in molecules, photodetectors, and advanced electronic materials.",
+        logo: "https://devicephysicslab.vercel.app/logo.png",
+        image: "https://devicephysicslab.vercel.app/logo.png",
+        parentOrganization: {
+          "@type": "Organization",
+          name: "SRM University AP",
+        },
+      },
+
+      {
+        "@type": "Person",
+        "@id": "https://devicephysicslab.vercel.app/#pi",
+        name: "Dr. Sabyasachi Mukhopadhyay",
+        jobTitle: "Associate Professor",
+        worksFor: {
+          "@id": "https://devicephysicslab.vercel.app/#organization",
+        },
+        affiliation: {
+          "@type": "Organization",
+          name: "SRM University AP",
+        },
+        url: "https://devicephysicslab.vercel.app",
+        image: "https://devicephysicslab.vercel.app/pi.jpg",
+        knowsAbout: [
+          "Organic Electronics",
+          "Molecular Electronics",
+          "Charge Transport",
+          "Optoelectronics",
+        ],
+        sameAs: [
+          "https://scholar.google.com/citations?user=GaleEZ8AAAAJ&hl=en",
+          "https://orcid.org/0000-0002-6290-6380",
+          "https://www.linkedin.com/in/sabyasachi-m-3ba24615/",
+        ],
+      },
     ],
-    logo: "https://devicephysicslab.vercel.app/logo.png",
-    image: "https://devicephysicslab.vercel.app/logo.png",
-    parentOrganization: {
-      "@type": "Organization",
-      name: "SRM University AP",
-    },
   };
 
   return (
@@ -52,7 +77,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         
-        {/* ✅ THIS IS THE ONLY IMPORTANT LINE */}
+        {/* ✅ Structured Data (FINAL WORKING) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
