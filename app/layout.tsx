@@ -67,6 +67,73 @@ export default function RootLayout({
           "https://www.linkedin.com/in/sabyasachi-m-3ba24615/",
         ],
       },
+
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://devicephysicslab.vercel.app/#paper1",
+        headline:
+          "Tailoring Lithium-Ion Storage in Li₄WO₅ via Mo Substitution",
+        author: [
+          {
+            "@type": "Person",
+            name: "M. Sarathbavan",
+          },
+          {
+            "@id": "https://devicephysicslab.vercel.app/#pi",
+          },
+        ],
+        datePublished: "2026",
+        isPartOf: {
+          "@type": "Periodical",
+          name: "Journal of Physical Chemistry C",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "ACS Publications",
+        },
+      },
+
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://devicephysicslab.vercel.app/#paper2",
+        headline:
+          "Energy harvesting from LiNbO₃ piezoelectric nanogenerator",
+        author: [
+          {
+            "@type": "Person",
+            name: "M. Sarathbavan",
+          },
+          {
+            "@id": "https://devicephysicslab.vercel.app/#pi",
+          },
+        ],
+        datePublished: "2025",
+        isPartOf: {
+          "@type": "Periodical",
+          name:
+            "Journal of Materials Science: Materials in Electronics",
+        },
+      },
+
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://devicephysicslab.vercel.app/#paper3",
+        headline: "Intrachain Folded Aromatic Polyamides",
+        author: [
+          {
+            "@type": "Person",
+            name: "S. Samanta",
+          },
+          {
+            "@id": "https://devicephysicslab.vercel.app/#pi",
+          },
+        ],
+        datePublished: "2025",
+        isPartOf: {
+          "@type": "Periodical",
+          name: "Small",
+        },
+      },
     ],
   };
 
@@ -77,7 +144,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         
-        {/* ✅ Structured Data (FINAL WORKING) */}
+        {/* ✅ FINAL Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
