@@ -1,7 +1,8 @@
 'use client'
-import { useState } from "react";
+
+import PublicationsSection from "@/components/PublicationsSection";
 export default function Home() {
-  const [pubTab, setPubTab] = useState("articles");
+
   return (
     <main className="min-h-screen bg-[#0d1f3c] text-white scroll-smooth">
 
@@ -90,59 +91,123 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="bg-[#f8f5ef] text-black px-8 py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-[320px_1fr] gap-12">
+      {/* ABOUT PI */}
+<section id="about" className="bg-[#f8f5ef] text-black px-8 py-20">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-[320px_1fr] gap-12">
 
-          <div className="bg-white p-5 border rounded-lg flex flex-col items-center">
-            <img src="/pi.jpg" alt="PI" className="w-full h-[420px] object-cover object-center rounded-lg shadow-md" />
+    {/* LEFT: IMAGE + LINKS */}
+    <div className="bg-white p-5 border rounded-lg flex flex-col items-center">
+      <img
+        src="/pi.jpg"
+        alt="PI"
+        className="w-full h-[420px] object-cover object-center rounded-lg shadow-md"
+      />
 
-            <div className="mt-4 flex flex-col gap-3 w-full">
-              <a href="https://scholar.google.com/citations?user=GaleEZ8AAAAJ&hl=en" target="_blank" className="w-full text-center border border-[#c9a84c] text-[#0d1f3c] py-2 rounded hover:bg-[#c9a84c] hover:text-white transition">
-                Google Scholar
-              </a>
-              <a href="https://orcid.org/0000-0002-6290-6380" target="_blank" className="w-full text-center border border-[#c9a84c] text-[#0d1f3c] py-2 rounded hover:bg-[#c9a84c] hover:text-white transition">
-                ORCiD
-              </a>
-              <a href="https://www.linkedin.com/in/sabyasachi-m-3ba24615/?originalSubdomain=in" target="_blank" className="w-full text-center border border-[#c9a84c] text-[#0d1f3c] py-2 rounded hover:bg-[#c9a84c] hover:text-white transition">
-                LinkedIn
-              </a>
-            </div>
-          </div>
+      <div className="mt-4 flex flex-col gap-3 w-full">
+        <a
+          href="https://scholar.google.com/citations?user=GaleEZ8AAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full text-center border border-[#c9a84c] text-[#0d1f3c] py-2 rounded hover:bg-[#c9a84c] hover:text-white transition"
+        >
+          Google Scholar
+        </a>
 
-          <div>
-            <h2 className="text-4xl font-serif text-[#0d1f3c] mb-3">Dr. Sabyasachi Mukhopadhyay</h2>
-            <p className="text-[#444] mb-5">Associate Professor · CRF & I-STEM Coordinator · MSc In-charge</p>
+        <a
+          href="https://orcid.org/0000-0002-6290-6380"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full text-center border border-[#c9a84c] text-[#0d1f3c] py-2 rounded hover:bg-[#c9a84c] hover:text-white transition"
+        >
+          ORCiD
+        </a>
 
-            <p className="text-sm text-[#555] leading-7 mb-5">
-              Device physicist working at the interface of molecular electronics, organic systems, and hybrid materials.
-            </p>
+        <a
+          href="https://www.linkedin.com/in/sabyasachi-m-3ba24615/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full text-center border border-[#c9a84c] text-[#0d1f3c] py-2 rounded hover:bg-[#c9a84c] hover:text-white transition"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
 
-            <p className="text-sm text-[#555] leading-7 mb-10">
-              Research integrates molecular transport, biointerfaces, and energy systems to develop next-generation devices.
-            </p>
+    {/* RIGHT: CONTENT + METRICS */}
+    <div className="grid md:grid-cols-[1fr_280px] gap-10">
 
-            <h3 className="font-serif text-xl text-[#0d1f3c] mb-4">Professional Experience</h3>
-            <div className="border-l-2 border-[#c9a84c] pl-6 space-y-4 mb-10 text-sm">
-              <p><strong>2017–Present</strong> · Associate Professor, SRM University AP, India</p>
-              <p><strong>2012–2016</strong> · Postdoctoral Fellow, Weizmann Institute of Science, Israel (Materials & Interfaces and Organic Chemistry)</p>
-              <p><strong>2015</strong> · Visiting Researcher, Innovation Lab GmbH, Heidelberg (F–SKFM development project)</p>
-              <p><strong>2012</strong> · Visiting Research Associate, Saha Institute of Nuclear Physics, Kolkata</p>
-              <p><strong>2012</strong> · Senior Research Support Specialist, SUNY Albany (fluid-mode AFM imaging)</p>
-            </div>
+      {/* TEXT CONTENT */}
+      <div>
+        <h2 className="text-4xl font-serif text-[#0d1f3c] mb-3">
+          Dr. Sabyasachi Mukhopadhyay
+        </h2>
 
-            <h3 className="font-serif text-xl text-[#0d1f3c] mb-4">Awards & Honors</h3>
-            <ul className="space-y-2 text-sm text-[#555]">
-              <li>SERB Early Career Research Award (2019–2022, ₹48.3 Lakhs)</li>
-              <li>Postdoctoral Research Fellowship, PBC Program, Israel (2013)</li>
-              <li>Best Poster Award, IUMRS–ICA, Bangalore (2013)</li>
-              <li>Student Presentation Award, NFOII, Beijing (2010)</li>
-              <li>Travel Grants: Volkswagen Foundation, DST, CSIR, JNCASR & Weizmann Institute</li>
-            </ul>
+        <p className="text-[#444] mb-5">
+          Associate Professor · CRF & I-STEM Coordinator · MSc In-charge
+        </p>
 
-          </div>
+        <p className="text-sm text-[#555] leading-7 mb-5">
+          Device physicist working at the interface of molecular electronics, organic systems, and hybrid materials.
+        </p>
+
+        <p className="text-sm text-[#555] leading-7 mb-10">
+          Research integrates molecular transport, biointerfaces, and energy systems to develop next-generation devices.
+        </p>
+
+        <h3 className="font-serif text-xl text-[#0d1f3c] mb-4">
+          Professional Experience
+        </h3>
+
+        <div className="border-l-2 border-[#c9a84c] pl-6 space-y-4 mb-10 text-sm">
+          <p><strong>2017–Present</strong> · Associate Professor, SRM University AP, India</p>
+          <p><strong>2012–2016</strong> · Postdoctoral Fellow, Weizmann Institute of Science, Israel</p>
+          <p><strong>2015</strong> · Visiting Researcher, Innovation Lab GmbH, Heidelberg</p>
+          <p><strong>2012</strong> · Visiting Research Associate, Saha Institute of Nuclear Physics</p>
+          <p><strong>2012</strong> · Senior Research Support Specialist, SUNY Albany</p>
         </div>
-      </section>
+
+        <h3 className="font-serif text-xl text-[#0d1f3c] mb-4">
+          Awards & Honors
+        </h3>
+
+        <ul className="space-y-2 text-sm text-[#555]">
+          <li>SERB Early Career Research Award (2019–2022, ₹48.3 Lakhs)</li>
+          <li>Postdoctoral Research Fellowship, PBC Program, Israel (2013)</li>
+          <li>Best Poster Award, IUMRS–ICA, Bangalore (2013)</li>
+          <li>Student Presentation Award, NFOII, Beijing (2010)</li>
+          <li>Travel Grants: Volkswagen Foundation, DST, CSIR, JNCASR & Weizmann Institute</li>
+        </ul>
+      </div>
+
+      {/* METRICS */}
+      <div className="mt-6 md:mt-0">
+        <h3 className="font-serif text-xl text-[#0d1f3c] mb-4">
+          Research Metrics
+        </h3>
+
+        <div className="bg-white border border-[#c9a84c] rounded-lg shadow-md overflow-hidden">
+          <table className="text-sm w-full">
+            <tbody>
+              <tr className="border-b">
+                <td className="px-4 py-3 font-medium">Citations</td>
+                <td className="px-4 py-3 text-right">3065</td>
+              </tr>
+              <tr className="border-b">
+                <td className="px-4 py-3 font-medium">h-index</td>
+                <td className="px-4 py-3 text-right">14</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-medium">i10-index</td>
+                <td className="px-4 py-3 text-right">19</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* RESEARCH */}
       <section id="research" className="bg-[#f8f5ef] text-black px-8 py-20">
@@ -309,70 +374,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PUBLICATIONS */}
-      <section id="publications" className="bg-[#0d1f3c] px-8 py-20">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-serif mb-6">Publications</h2>
-
-<div className="flex gap-4 mb-10">
-  {["articles", "patents", "books"].map(tab => (
-    <button
-      key={tab}
-      onClick={() => setPubTab(tab)}
-      className={`px-4 py-2 rounded ${
-        pubTab === tab
-          ? "bg-[#c9a84c] text-black"
-          : "bg-[#1b2f55]"
-      }`}
-    >
-      {tab.toUpperCase()}
-    </button>
-  ))}
-</div>
-
-{pubTab === "articles" && (
-  <>
-    <p className="text-[#c9a84c] mb-2">2026</p>
-    <p>M. Sarathbavan et al.</p>
-    <p className="italic">Tailoring Lithium-Ion Storage in Li₄WO₅ via Mo Substitution</p>
-    <p className="mb-6">Journal of Physical Chemistry C</p>
-
-    <p className="text-[#c9a84c] mb-2">2025</p>
-    <p>S. Samanta et al.</p>
-    <p className="italic">Intrachain Folded Aromatic Polyamides</p>
-    <p>Small</p>
-  </>
-)}
-
-{pubTab === "patents" && (
-  <>
-    <p className="text-[#c9a84c] mb-2">2026</p>
-    <p>Handheld Ligand-Based Electrochemical Sensor</p>
-    <p className="mb-6">IN202641008527 A1</p>
-
-    <p className="text-[#c9a84c] mb-2">2021</p>
-    <p>Fiber Material with Moisture Retention</p>
-    <p className="mb-6">IN202141023375</p>
-
-    <p>PDMS Microchannel Devices</p>
-    <p>IN20214101730A</p>
-  </>
-)}
-
-{pubTab === "books" && (
-  <>
-    <p className="text-[#c9a84c] mb-2">2026</p>
-    <p>2D Materials in Chemical Sensing</p>
-    <p className="mb-6">CRC Press</p>
-
-    <p className="text-[#c9a84c] mb-2">2020</p>
-    <p>Thermochromic Materials for Buildings</p>
-    <p>Elsevier</p>
-  </>
-)}
-
-</div>      {/* ✅ ADD THIS */}
-</section>  {/* ✅ ADD THIS */}
+      <PublicationsSection />
       {/* CAREERS */}
       <section id="careers" className="bg-[#0d1f3c] text-center px-8 py-20">
         <h2 className="text-3xl font-serif mb-4">Join the Lab</h2>
